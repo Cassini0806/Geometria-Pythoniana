@@ -65,6 +65,18 @@ def perimetro_triangulo(lado_a: float, lado_b: float, lado_c:  float):
     perimetro = lado_a + lado_b + lado_c
     return float(perimetro)
 
+def perimetro_trapezio(base_maior: float, base_menor: float, l1: float, l2: float):
+    """perimetro_trapezio(base_maior: float, base_menor: float, l1: float, l2: float)
+    
+    Retorna o perímetro de um trapezio em função de seus lados (P = base_maior + base_menor + lado_1 + lado_2).
+    Exemplo:
+    >>> perimetro_trapezio(4, 3, 2, 2)
+    11.0
+    >>> perimetro_trapezio(7, 8, 5, 5)
+    25.0"""
+    perimetro = base_maior + base_menor + l1 + l2
+    return float(perimetro)
+
 #areas
 def area_circulo(raio: float):
     """area_circulo(raio: float)
