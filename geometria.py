@@ -3,6 +3,7 @@
 
 import math
 
+#apotema
 def apotema(lado: float, numero_lados: int):
     """apotema(lado: float, numero_lados: int)
     
@@ -78,6 +79,12 @@ def perimetro_trapezio(base_maior: float, base_menor: float, l1: float, l2: floa
     return float(perimetro)
 
 #areas
+def area_regular(lado: float, numero_lados: int):
+    apot = apotema(lado, numero_lados)
+    semiper = perimetro_regular(lado, numero_lados) / 2
+    area = semiper * apot
+    return area
+
 def area_circulo(raio: float):
     """area_circulo(raio: float)
 
