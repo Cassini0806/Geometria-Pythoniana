@@ -3,7 +3,6 @@
 
 import math
 
-#apotema
 def apotema(lado: float, numero_lados: int):
     """apotema(lado: float, numero_lados: int)
     
@@ -79,11 +78,19 @@ def perimetro_trapezio(base_maior: float, base_menor: float, l1: float, l2: floa
     return float(perimetro)
 
 #areas
-def area_regular(lado: float, numero_lados: int):
-    apot = apotema(lado, numero_lados)
+def area_regular(lado: float, numero_lados: float):
+    """area_regular(lado: float, numero_lados: float)
+    
+    Retorna a área de um polígono regular em função do semiperímetro e da apótema (A = P * a / 2).
+    Exemplo:
+    >>> area_regular(4, 4)
+    16.000000000000004
+    >>> area_regular(5, 6)
+    64.9519052838329"""
     semiper = perimetro_regular(lado, numero_lados) / 2
+    apot = apotema(lado, numero_lados)
     area = semiper * apot
-    return area
+    return float(area)
 
 def area_circulo(raio: float):
     """area_circulo(raio: float)
