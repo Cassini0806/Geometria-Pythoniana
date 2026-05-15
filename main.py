@@ -45,7 +45,7 @@ def calculo_paralelogramo(tipo_calculo: str):
         case _:
             return "Calculo não identificado."
                         
-def calcula_trapezio(tipo_calculo: str):
+def calculo_trapezio(tipo_calculo: str):
     match tipo_calculo:
         case 'area':
             base_maior = float(input("Base maior: "))
@@ -63,7 +63,7 @@ def calcula_trapezio(tipo_calculo: str):
         case _:
             return "Calculo não identificado."
 
-def calcula_losango(tipo_calculo: str):
+def calculo_losango(tipo_calculo: str):
     match tipo_calculo:
         case 'area':
             diagonal_maior = float(input("Diagonal maior: "))

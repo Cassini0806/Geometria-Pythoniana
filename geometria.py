@@ -123,18 +123,6 @@ def area_triangulo(base: float, altura: float):
     area = area_paralelogramo(base, altura) / 2
     return float(area)    
 
-def area_triangulo_equilatero(lado: float):
-    """area_triangulo_equilatero(lado: float)
-
-    Retorna a área de um triângulo equilátero em função de seu lado (A = lado^2 * 3^0.5 / 4).
-    Exemplo:
-    >>> area_triangulo_equilatero(3)
-    3.8971143170299736
-    >>> area_triangulo_equilatero(5)
-    10.825317547305483"""
-    area = math.pow(lado, 2) * math.sqrt(3) / 4
-    return float(area)
-    
 def area_trapezio(base_maior: float, base_menor: float, altura: float):
     """area_trapezio(base_maior: float, base_menor: float, altura: float)
     
@@ -145,33 +133,7 @@ def area_trapezio(base_maior: float, base_menor: float, altura: float):
     >>> area_trapezio(8, 4, 3)
     18.0"""
     area = (base_maior + base_menor) * altura / 2
-    return float(area)
-    
-def area_pentagono(lado: float):
-    """area_pentagono(lado: float)
-    
-    Retorna a área de um pentagono regular em função de seu lado, através da medida de seu perímetro e seu apotema (A = perimetro * apotema / 2).
-    Exemplo:
-    >>> area_pentagono(5)
-    43.01193501472417
-    >>> area_pentagono(2)
-    6.881909602355868"""
-    apotema_pent = apotema(lado, 5)
-    perimetro_pent = perimetro_regular(lado, 5)
-    area = perimetro_pent * apotema_pent / 2 
-    return float(area)
-
-def area_hexagono(lado: float):
-    """area_hexagono(lado: float)
-    
-    Retorna a área de um hexagono regular em função de seu lado (A = 6 * lado^2 * 3^0.5 / 4).
-    Exemplo:
-    >>> area_hexagono(3)
-    23.38268590217984
-    >>> area_hexagono(5)
-    64.9519052838329"""
-    area =  area_triangulo_equilatero(lado) * 6
-    return float(area)       
+    return float(area)      
 
 if __name__ == '__main__':
     import doctest
